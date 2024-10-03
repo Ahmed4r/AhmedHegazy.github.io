@@ -8,8 +8,7 @@ body {
 }
 
 .container {
-    width: 90%; /* Use a percentage for better responsiveness */
-    max-width: 1200px; /* Optional max-width for larger screens */
+    width: 90%; /* Adjusted to a smaller width for mobile */
     margin: 0 auto;
     text-align: center;
     padding: 50px 0;
@@ -41,59 +40,28 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     margin-bottom: 20px;
-    transition: background-color 0.3s, color 0.3s; /* Add a transition */
-}
-
-#project .button:hover {
-    background-color: #555; /* Darken button on hover */
-    color: #fff; /* Change text color */
 }
 
 /* Image styles */
 .images {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping of images */
-    justify-content: center;
+    display: flex;            /* Use Flexbox for layout */
+    flex-wrap: wrap;         /* Allow images to wrap to the next line */
+    justify-content: center;  /* Center images horizontally */
 }
 
 .images img {
-    width: 100%; /* Make images responsive */
-    max-width: 200px; /* Maintain a max width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px;
+    width: 100px;            /* Set a smaller width for images */
+    height: auto;            /* Maintain aspect ratio */
+    margin: 10px;            /* Add margin around images */
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px; /* Smaller font size for smaller screens */
-    }
-    
-    header p {
-        font-size: 16px; /* Adjusted font size */
-    }
-
-    .container {
-        padding: 30px 0; /* Adjust padding for smaller screens */
-    }
-    
-    .button {
-        padding: 8px 16px; /* Smaller button padding */
-    }
+/* Small and large image */
+.small-image {
+    /* Additional styles for small images if needed */
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 24px; /* Further reduce font size */
-    }
-    
-    header p {
-        font-size: 14px; /* Further adjust paragraph size */
-    }
-
-    .button {
-        padding: 6px 12px; /* Even smaller button padding */
-    }
+.large-image {
+    /* Additional styles for large images if needed */
 }
 
 /* Social icons */
@@ -117,4 +85,27 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header {
+        padding: 50px 0; /* Adjust header padding for mobile */
+    }
+
+    header h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    header p {
+        font-size: 16px; /* Smaller paragraph size for mobile */
+    }
+
+    .images img {
+        width: 80px; /* Further reduce image size on mobile */
+    }
+
+    .container {
+        padding: 20px 0; /* Reduce padding for mobile */
+    }
 }
